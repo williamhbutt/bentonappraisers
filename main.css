@@ -2457,7 +2457,19 @@ div.sharedaddy.sd-like-enabled .sd-like .post-likes-widget {
     border: 0
 }
 
+@media (min-width:600px) {
+    .mobile-only {
+        display: none;
+    }
+}
 @media (max-width:600px) {
+    .desktop {
+        display: none;
+    }
+    .mobile-only {
+        margin-bottom: 25px;
+        display: block;
+    }
     .wp-block-media-text.is-stacked-on-mobile {
         -ms-grid-columns: 100% !important;
         grid-template-columns: 100% !important
