@@ -13,22 +13,32 @@
 
 
     <style id="jetpack-custom-fonts-css">
-	@media (pointer: coarse) {
+    	@media (pointer: coarse) {
             .touch-device-only {
-	        display: block;	    
-	    }
-	    .mouse-device-only {
-	        display: none;
-	    }
-	}
-	@media (pointer: fine) {
-	    .touch-device-only {
-	    	display: none;
-	    }
-	    .mouse-device-only {
-	        display: block;
-	    }
-	}
+    	        display: block;	    
+    	    }
+    	    .mouse-device-only {
+    	        display: none;
+    	    }
+    	}
+    	@media (pointer: fine) {
+            @media (min-width:750) {
+                .touch-device-only {
+    	    	    display: none;
+    	        }
+    	        .mouse-device-only {
+    	            display: block;
+    	        } 
+            }
+            @media (max-width:750px) {
+                .touch-device-only {
+    	            display: block;	    
+    	        }
+    	        .mouse-device-only {
+    	            display: none;
+    	        }
+            }
+    	}
 	    
         .wf-active body,
         .wf-active button,
