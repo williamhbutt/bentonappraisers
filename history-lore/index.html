@@ -13,6 +13,33 @@
 
 
     <style id="jetpack-custom-fonts-css">
+    	@media (pointer: coarse) {
+            .touch-device-only {
+    	        display: block;	    
+    	    }
+    	    .mouse-device-only {
+    	        display: none;
+    	    }
+    	}
+    	@media (pointer: fine) {
+            @media (min-width:750px) {
+                .touch-device-only {
+    	    	    display: none;
+    	        }
+    	        .mouse-device-only {
+    	            display: block;
+    	        } 
+            }
+            @media (max-width:750px) {
+                .touch-device-only {
+    	            display: block;	    
+    	        }
+    	        .mouse-device-only {
+    	            display: none;
+    	        }
+            }
+    	}
+	    
         .wf-active body,
         .wf-active button,
         .wf-active input,
@@ -836,7 +863,7 @@
                                 <p class="has-medium-font-size">
                                     See below for more history:
                                 </p>
-                                <p class="has-medium-font-size mobile-only">
+                                <p class="has-medium-font-size touch-device-only">
                                     <a href="../LF Benton History.pdf">History of the L.F. Benton Company</a>
 			    	    </br></br>		
 				    <a href="../custer.pdf">Harvey Custer Ingham, Vergennes Artist</a>
@@ -844,9 +871,9 @@
                             </div>
                         </article>
 
-                        <iframe class="desktop" src="../LF Benton History.pdf" width="100%" height="800px"></iframe>
+                        <iframe class="mouse-device-only" src="../LF Benton History.pdf" width="100%" height="800px"></iframe>
 		        </br></br>    
-			<iframe class="desktop" src="../custer.pdf" width="100%" height="800px"></iframe>    
+			<iframe class="mouse-device-only" src="../custer.pdf" width="100%" height="800px"></iframe>    
 
                     </main>
                 </div><!-- #primary -->
